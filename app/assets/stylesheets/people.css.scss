@@ -1,0 +1,27 @@
+// Place all the styles related to the People controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.People {
+  // Place scoped styles here
+}
+.hello{
+  color: red
+}
+#e{
+  border: 1px solid green;
+  box-shadow: 1px 1px 3px green;
+  border-radius: 8px;
+  width:700px;
+  height:600px;
+  background:black
+}
+#f{
+  border: 1px solid black;
+  padding:20px;
+  margin:10px;
+  background:white;
+  align:center;
+  height:500px;
+  text-color:white
+}

@@ -1,0 +1,53 @@
+<h1>Listing people</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<div id="cycle">
+  <div id="new" class="o">Hider</div>
+  <div id="old" class="o">to be hiddenadasd</div>
+</div>
+
+<div id="next">
+  Next
+</div>
+<div id="b">
+  <h3>kkk</h3>
+  <div id="a" class="b">Hitler</div>
+  <h3>kkk</h3>
+<div id="b" class="b">to be hitler</div>
+  <h3>kkk</h3>
+  <div id="prev">Second Div End</div>
+</div>
+
+<div id= "c" class="c">
+  This is Div C
+</div>
+<div id= "d">
+  This is Div D
+</div>
+<div id= "e">
+    <div id= "f">
+      <div id="railspng" class="o" caption_text= "play nfs" link = "gmail.com"><%= link_to image_tag("img.JPG"), new_person_path %></div>
+      <div id="emgjpg" class="o" caption_text= "help the poor" link = "yahoo.com"><%= link_to image_tag("emg.jpg"), new_person_path %></div>
+    </div>
+    <div id = "caption"></div>
+</div>
+
+<% @people.each do |person| %>
+  <tr>
+    <td><%= person.name %></td>
+    <td><%= link_to 'Show', person %></td>
+    <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <td><%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Person', new_person_path %>
