@@ -30,13 +30,7 @@
 <div id= "d">
   This is Div D
 </div>
-<div id= "e">
-    <div id= "f">
-      <div id="railspng" class="o" caption_text= "play nfs" link = "gmail.com"><%= link_to image_tag("img.JPG"), new_person_path %></div>
-      <div id="emgjpg" class="o" caption_text= "help the poor" link = "yahoo.com"><%= link_to image_tag("emg.jpg"), new_person_path %></div>
-    </div>
-    <div id = "caption"></div>
-</div>
+
 
 <% @people.each do |person| %>
   <tr>
@@ -49,5 +43,34 @@
 </table>
 
 <br />
-
+<div id = "menu">MENU</div>
+<div>
+<div id = "nav-about" class = "nav">
+  <ul>
+  <li id = "society" class = "nav-items">The</li>
+  <li id = "hemo" class = "nav-items">Item</li>
+  <li class = "nav-items">Is</li>
+  </ul>
+</div>
+<div id = "submenus">
+<div id = "submenu-about" class = "submenu">
+  <span class = "submenu-items" id = "about-us">About Us</span>
+  <span class = "submenu-items">About Them</span>
+  <span class = "submenu-items">About You</span>
+</div>
+<div id = "submenu-activities" class = "submenu">
+  <span class = "submenu-items">Major Activities</span>
+  <span class = "submenu-items">Events</span>
+</div>
+<div id = "submenu-support" class = "submenu">
+  <span class = "submenu-items">Donate Blood</span>
+  <span class = "submenu-items">Donate Money</span>
+</div>
+<div id = "content">
+  here is the content for the things
+</div>
+</div>
+</div>
+<div>
 <%= link_to 'New Person', new_person_path %>
+</div>

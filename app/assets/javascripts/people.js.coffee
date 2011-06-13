@@ -4,7 +4,9 @@
 $(document).ready ->
   $('#prev').addClass("hello")
   $('.o').hide()
-
+  $('.submenu').hide()
+  $('#nav-about').hide()
+  $('#content').hide()
   setInterval(
     ->
       a = $('#f').children()
@@ -31,5 +33,23 @@ $(document).ready ->
     $('#d').addClass('c')
     console.log("Clicked")
     $('#e').addClass('c')
+
+  $('#menu').click ->
+    $('#nav-about').slideDown(2000)
+
+  $('#nav-about #society').mouseenter ->
+    $('.submenu').hide()
+    $('#submenu-about').fadeTo(3000,1)
+
+  $('#nav-about #hemo').mouseenter ->
+    $('.submenu').hide()
+    $('#submenu-activities').fadeTo(2000,1)
+  $('#about-us').click ->
+    $('#content').show()
+  $('#content').click ->
+    $('#content').animate({marginLeft: "300px"},2000,
+      ->
+      )
+
 
 
