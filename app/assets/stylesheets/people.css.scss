@@ -26,12 +26,14 @@ body.People {
   text-color:white
 }
 .nav-items{
-width:100px;
+width:200px;
+height:50px;
 font-size:30px;
 border-style:solid;
 padding:10px;
 background-color:#33CC33;
 font-color:red;
+position:relative;
 }
 .nav{
 width:200px;
@@ -50,6 +52,8 @@ border-style:solid;
 padding:10px;
 background-color:violet;
 border-radius:5px;
+moz-border-radius:5px;
+
 }
 #submenus{
 display:inline-block;
@@ -57,4 +61,20 @@ vertical-align:top;
 }
 #content{
     margin-top:50px;
+}
+.menu-image{
+    background-image:url('../assets/arrows.png');
+    background-repeat:no-repeat;
+    background-position:-333px -929px;
+    width:100px;
+    height:100px;
+    position:absolute;
+}
+#cls{
+    background-image:url('../assets/emg.jpg');
+    background-repeat:no-repeat;
+    width:100px;
+    height:100px;
+    background-position:0px 0px;
+
 }

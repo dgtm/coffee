@@ -34,11 +34,14 @@ $(document).ready ->
     console.log("Clicked")
     $('#e').addClass('c')
 
-  $('#menu').click ->
-    $('#nav-about').slideDown(2000)
+  $('#menu').toggle(
+   -> $('#nav-about').slideDown(2000)
+   -> $('#nav-about').slideUp(2000)
+  )
 
   $('#nav-about #society').mouseenter ->
     $('.submenu').hide()
+    $('#submenu-about').children().show()
     $('#submenu-about').fadeTo(3000,1)
 
   $('#nav-about #hemo').mouseenter ->
@@ -48,6 +51,29 @@ $(document).ready ->
     $('#content').show()
   $('#content').click ->
     $('#content').animate({marginLeft: "300px"},2000,
+      ->
+      )
+
+  $('#content').toggle(
+    -> $('#content').animate({marginLeft: "300px"}),
+    -> $('#content').animate({marginLeft: "0px"},500)
+  )
+
+  $('.submenu-items').click ->
+    $(this).css('font-size','25px')
+    $(this).css('border-bottom','2px solid #ccc')
+
+  # $('#content').toggle(
+  #   -> $('#content').animate({marginLeft: "300px"},2000,
+  #     ->
+  #     ),
+  #   -> $('#content').animate({marginRight: "300px"},2000,
+  #     ->
+  #     )
+  # )
+
+  $('.nav-items').mouseenter ->
+    $(this).children().first().animate({'rotate':'+=360deg'},1000,
       ->
       )
 

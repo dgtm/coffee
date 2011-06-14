@@ -30,8 +30,8 @@
 <div id= "d">
   This is Div D
 </div>
-
-
+<div id = "cls">
+</div>
 <% @people.each do |person| %>
   <tr>
     <td><%= person.name %></td>
@@ -41,15 +41,15 @@
   </tr>
 <% end %>
 </table>
-
+<%= image_tag("emg.jpg", :id=>"imager")%>
 <br />
 <div id = "menu">MENU</div>
 <div>
 <div id = "nav-about" class = "nav">
   <ul>
-  <li id = "society" class = "nav-items">The</li>
-  <li id = "hemo" class = "nav-items">Item</li>
-  <li class = "nav-items">Is</li>
+  <li id = "society" class = "nav-items">The<span class = "menu-image"></span></li>
+  <li id = "hemo" class = "nav-items">Item<span class = "menu-image"></span></li>
+  <li class = "nav-items">Is<span class = "menu-image"></span></li>
   </ul>
 </div>
 <div id = "submenus">
