@@ -60,6 +60,7 @@ $(document).ready ->
   )
 
   $('.submenu-items').click ->
+    $('.submenu-items').css('font-size','20px')
     $(this).css('font-size','25px')
     $(this).css('border-bottom','2px solid #ccc')
 
@@ -76,6 +77,7 @@ $(document).ready ->
     $(this).children().first().animate({'rotate':'+=360deg'},1000,
       ->
       )
+  $('a#light').fancybox({'titlePosition':'over'})
 
 
 
