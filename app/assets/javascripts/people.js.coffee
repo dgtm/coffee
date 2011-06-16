@@ -41,14 +41,23 @@ $(document).ready ->
 
   $('#nav-about #society').mouseenter ->
     $('.submenu').hide()
-    $('#submenu-about').children().show()
+    $('#submenus#submenu-about').children().show()
     $('#submenu-about').fadeTo(3000,1)
 
   $('#nav-about #hemo').mouseenter ->
     $('.submenu').hide()
     $('#submenu-activities').fadeTo(2000,1)
+
+  # Click submenus of About
   $('#about-us').click ->
-    $('#content').show()
+    $('#content').show("fold",1000)
+    $('#content#about-us-content').show()
+  $('#about-hemo').click ->
+    $('#content').show("fold",1000)
+    $('#content #about-hemo-content').show()
+  $('#goals').click ->
+    $('#content').show("fold",1000)
+    $('#content #goals-content').show()
   $('#content').click ->
     $('#content').animate({marginLeft: "300px"},2000,
       ->
@@ -74,10 +83,20 @@ $(document).ready ->
   # )
 
   $('.nav-items').mouseenter ->
+    $('.nav-items').animate({marginLeft: "0px"})
+    $(this).animate({marginLeft: "20px"})
     $(this).children().first().animate({'rotate':'+=360deg'},1000,
       ->
       )
   $('a#light').fancybox({'titlePosition':'over'})
+  $('#listing').click ->
+    $('#listing').effect("pulsate",{times:3},7000)
+
+
+  setInterval(
+    ->
+      $('#listing').effect("pulsate",{times:20},1600)
+  )
 
 
 

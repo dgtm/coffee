@@ -25,19 +25,24 @@ body.People {
   height:500px;
   text-color:white
 }
+#nav-menus{
+    display:inline-block;
+width:400px;
+}
 .nav-items{
 width:200px;
-height:50px;
+height:90px;
 font-size:30px;
+font-family:'Limelight';
 border-style:solid;
 border-radius:10px;
 padding:10px;
 background-color:#33CC33;
 font-color:red;
 position:relative;
+list-style:none;
 }
 .nav{
-width:200px;
 display:inline-block;
 }
 .submenu{
@@ -61,12 +66,25 @@ display:inline-block;
 vertical-align:top;
 }
 #content{
-    margin-top:50px;
+    margin-top:10px;
+    padding-top:20px;
+    font-family:'Cabin Sketch';
+    border-radius:8px;
+    border-style:solid;
+    width:500px;
+}
+#listing{
+    font-family:'Cabin Sketch';
+font-size:50px;
+float:right;
+border:solid;
+border-radius:10px;
+padding:30px;
 }
 .menu-image{
     background-image:url('../assets/arrows.png');
     background-repeat:no-repeat;
-    background-position:-333px -929px;
+    background-position:-333px -913px;
     width:100px;
     height:100px;
     position:absolute;
@@ -77,5 +95,13 @@ vertical-align:top;
     width:100px;
     height:100px;
     background-position:0px 0px;
-
+}
+#main-display{
+    width:700px;
+display:inline;
+float:right;
+}
+#info{
+    font-family: 'La Belle Aurore';
+    font-size:50px;
 }
