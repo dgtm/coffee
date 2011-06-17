@@ -24,12 +24,15 @@ class PeopleController < ApplicationController
   # GET /people/new
   # GET /people/new.json
   def new
-    @person = Person.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @person }
-    end
+    p "aayo"
+    p params
+    # @person = Person.new
+    #
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @person }
+    # end
+    render :json => "json call".to_json
   end
 
   # GET /people/1/edit

@@ -1,4 +1,15 @@
 <h1 id = "listing">Support Us</h1>
+<div id = "boxes">
+  <div id = "activities" class = "shining">
+    <h2>About Us</h2>
+    <div class = "shining-text" id = "event">Brew some coffee and drink it before you leave</div></div>
+  <div id = "events" class = "shining">
+    <h2>Script</h2>
+    <div class = "shining-text" id = "activity">Show some Script</div></div>
+  <div id = "plans" class = "shining">
+    <h2>About Us</h2>
+    <div class = "shining-text" id = "event">Brew some coffee and drink it before you leave</div></div>
+</div>
 
 <table>
   <tr>
@@ -50,9 +61,9 @@
   <div id = "nav-menus">
     <div id = "nav-about" class = "nav">
       <ul>
-        <li id = "society" class = "nav-items">About Us<span class = "menu-image"></span></li>
-        <li id = "hemo" class = "nav-items">About our disease<span class = "menu-image"></span></li>
-        <li class = "nav-items">About Our Goals<span class = "menu-image"></span></li>
+        <li id = "society" class = "nav-items"><span class= "menu-text">About Us</span><span class = "menu-image"></span></li>
+        <li id = "hemo" class = "nav-items"><span class= "menu-text">About Us</span><span class = "menu-image"></span></li>
+        <li class = "nav-items"><span class= "menu-text">About Us</span><span class = "menu-image"></span></li>
       </ul>
     </div>
   </div>
@@ -86,6 +97,9 @@
   </div>
 </div>
 </div>
-<div>
-<%= link_to 'New Person', new_person_path %>
+<div id = "person_link">
+  <%= radio_button 'New Person', 'abc', :"data-source" => new_person_path %>
+</div>
+<div id="stickynote">
+  <h1>Support</h1>
 </div>

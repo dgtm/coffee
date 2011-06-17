@@ -1,9 +1,46 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Reenie+Beanie);
 
 body.People {
   // Place scoped styles here
+}
+#boxes h2{
+    font-family:'Wallpoet';
+    color:#B2ACA6;
+    font-size:30px;
+    border-bottom:1px dotted;
+}
+.shining-text{
+    color:#0C0D0C;
+}
+.shining{
+    margin:10px;
+    width:270px;
+    height:150px;
+    padding:5px;
+    background-color:#E6E2DF;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+#activities{
+    background-image:url('../assets/acts.png');
+    background-repeat:no-repeat;
+    background-position:290px -10px;
+    float:left;
+}
+#events{
+    background-image:url('../assets/events.png');
+    background-repeat:no-repeat;
+    background-position:290px -10px;
+    float:left;
+}
+#plans{
+    background-image:url('../assets/events.png');
+    background-repeat:no-repeat;
+    background-position:290px -10px;
+    float:left;
 }
 .hello{
   color: red
@@ -27,23 +64,45 @@ body.People {
 }
 #nav-menus{
     display:inline-block;
-width:400px;
+    width:400px;
+    float:left;
 }
 .nav-items{
 width:200px;
-height:90px;
+height:50px;
 font-size:30px;
 font-family:'Limelight';
 border-style:solid;
 border-radius:10px;
+-moz-border-radius:10px;
 padding:10px;
 background-color:#33CC33;
 font-color:red;
 position:relative;
 list-style:none;
+margin-top:10px;
+}
+.menu-text{
+vertical-align:text-bottom;
+}
+.menu-image{
+    background-image:url('../assets/arrows.png');
+    background-repeat:no-repeat;
+    background-position:-322px -913px;
+    width:130px;
+    height:100px;
+    position:absolute;
+    right:-54px;
+    bottom:-22px;
 }
 .nav{
 display:inline-block;
+}
+
+#submenus{
+display:inline-block;
+vertical-align:top;
+margin-left: 500px;
 }
 .submenu{
 width:600px;
@@ -59,36 +118,37 @@ padding:10px;
 background-color:violet;
 border-radius:5px;
 moz-border-radius:5px;
+}
+#about-us{
+    background-color:#49A7F3;
+}
+#about-hemo{
+    background-color:#41D05F;
+}
 
-}
-#submenus{
-display:inline-block;
-vertical-align:top;
-}
 #content{
+    background-color:#E6E2DF;
     margin-top:10px;
     padding-top:20px;
     font-family:'Cabin Sketch';
     border-radius:8px;
+    -moz-border-radius:8px;
     border-style:solid;
-    width:500px;
+    width:1000px;
 }
 #listing{
+    display:none;
     font-family:'Cabin Sketch';
 font-size:50px;
 float:right;
-border:solid;
 border-radius:10px;
+-moz-border-radius:10px;
+
 padding:30px;
+background-color:violet;
+
 }
-.menu-image{
-    background-image:url('../assets/arrows.png');
-    background-repeat:no-repeat;
-    background-position:-333px -913px;
-    width:100px;
-    height:100px;
-    position:absolute;
-}
+
 #cls{
     background-image:url('../assets/emg.jpg');
     background-repeat:no-repeat;
@@ -99,9 +159,62 @@ padding:30px;
 #main-display{
     width:700px;
 display:inline;
-float:right;
+float:left;
 }
 #info{
     font-family: 'La Belle Aurore';
     font-size:50px;
+    color:#FED300;
+
 }
+
+#stickynote {
+    width:100px;
+    height:40px;
+    padding:50px;
+    margin:auto;
+    position:relative;
+    background-color:#fe6;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fe6), to(#f6ef97), color-stop(.6,#f5da41));
+    background:-moz-linear-gradient(top, #fe6, #f5da41, #f6ef97);
+    text-shadow:0 1px 0 #F6EF97;
+    box-shadow:0 0 5px rgba(0,0,0,.2);
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 5px rgba(0,0,0,.2);
+}
+
+
+
+#stickynote h1:before {
+    content:'';
+    display:block;
+    width:160px;
+    height:50px;
+    position:absolute;
+    top:-20px;
+    left:10px;
+    background-color:rgba(255,255,255,.25);
+    -o-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    box-shadow:0 0 2px rgba(0,0,0,.15);
+    -webkit-box-shadow:0 0 2px rgba(0,0,0,.15);
+    -moz-box-shadow:0 0 2px rgba(0,0,0,.15);
+    opacity:1;
+}
+
+#stickynote h1 {
+    font-family:'Cabin Sketch';
+    font-size:38px;
+    line-height:48px;
+    letter-spacing:1px;
+margin-bottom:30px;
+}
+
+#stickynote p {
+    font-size:14px;
+    line-height:36px;
+    margin-top:20px;
+}
+
+#stickynote a {color:#333;}

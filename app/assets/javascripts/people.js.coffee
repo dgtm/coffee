@@ -51,12 +51,15 @@ $(document).ready ->
   # Click submenus of About
   $('#about-us').click ->
     $('#content').show("fold",1000)
-    $('#content#about-us-content').show()
+    $('#content').children().hide()
+    $('#content #about-us-content').show()
   $('#about-hemo').click ->
     $('#content').show("fold",1000)
+    $('#content').children().hide()
     $('#content #about-hemo-content').show()
   $('#goals').click ->
     $('#content').show("fold",1000)
+    $('#content').children().hide()
     $('#content #goals-content').show()
   $('#content').click ->
     $('#content').animate({marginLeft: "300px"},2000,
@@ -85,7 +88,7 @@ $(document).ready ->
   $('.nav-items').mouseenter ->
     $('.nav-items').animate({marginLeft: "0px"})
     $(this).animate({marginLeft: "20px"})
-    $(this).children().first().animate({'rotate':'+=360deg'},1000,
+    $(this).children().last().animate({'rotate':'+=360deg'},1000,
       ->
       )
   $('a#light').fancybox({'titlePosition':'over'})
@@ -93,10 +96,50 @@ $(document).ready ->
     $('#listing').effect("pulsate",{times:3},7000)
 
 
-  setInterval(
-    ->
-      $('#listing').effect("pulsate",{times:20},1600)
-  )
+
+#  $('#listing').effect("pulsate",{times:20},1600)
+
+  $('#person_link').click ->
+    $.ajax({
+      type: "GET",
+      datatype: "json",
+      url: $(this).attr('data-source'),
+      success: (jsonData)->
+        console.log(jsonData)
+        console.log("abc")
+    })
+
+  # $('activities').animate({backgroundPosition,'(153px -10px)'})
+
+  $('#activities').mouseenter ->
+    $(this).children().css('color','white')
+    $(this).css('backgroundColor', '#49A7F3')
+    $(this).css('backgroundPosition','153px -10px')
+    # $(this).animate({backgroundPosition,'153px -10px'})
 
 
+  $('#activities').mouseleave ->
+    $(this).children().css('color','#B2ACA6')
+    $(this).css('backgroundColor', '#41D05F')
+    $(this).animate({backgroundPosition,'300px -10px'})
 
+  $('#events').mouseenter ->
+    $(this).children().css('color','white')
+    $(this).css('backgroundColor', '#ED6555')
+    $(this).css('backgroundPosition','153px -10px')
+
+  $('#events').mouseleave ->
+    $(this).children().css('color','#B2ACA6')
+    $(this).css('backgroundColor', '#E6E2DF')
+    $(this).animate({backgroundPosition,'300px -10px'})
+
+
+  $('#plans').mouseenter ->
+    $(this).children().css('color','white')
+    $(this).css('backgroundColor', '#FF8400')
+    $(this).css('backgroundPosition','153px -10px')
+
+  $('#plans').mouseleave ->
+    $(this).children().css('color','#B2ACA6')
+    $(this).css('backgroundColor', '#FEFCB5')
+    $(this).animate({backgroundPosition,'300px -10px'})
