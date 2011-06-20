@@ -218,3 +218,30 @@ margin-bottom:30px;
 }
 
 #stickynote a {color:#333;}
+
+.image-holder{
+    width:200px;
+    height:200px;
+    border-bottom:10px solid black;
+}
+.thumb{
+    width:200px;
+    height:200px;
+    cursor:pointer;
+    opacity:1.0;
+}
+.large{
+    width:600px;
+    height:600px;
+    position:absolute;
+    left:200px;
+    top:100px;
+    z-index:1000px;
+    -moz-box-shadow: 5px 5px 5px #ccc;
+    -webkit-box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+    opacity:1.0;
+    border-bottom:80px solid black;
+}
+.image-holder{
+}

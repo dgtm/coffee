@@ -109,37 +109,54 @@ $(document).ready ->
         console.log("abc")
     })
 
-  # $('activities').animate({backgroundPosition,'(153px -10px)'})
 
   $('#activities').mouseenter ->
     $(this).children().css('color','white')
     $(this).css('backgroundColor', '#49A7F3')
-    $(this).css('backgroundPosition','153px -10px')
-    # $(this).animate({backgroundPosition,'153px -10px'})
+
 
 
   $('#activities').mouseleave ->
     $(this).children().css('color','#B2ACA6')
     $(this).css('backgroundColor', '#41D05F')
-    $(this).animate({backgroundPosition,'300px -10px'})
+    #$(this).animate({backgroundPosition,'300px -10px'})
+
 
   $('#events').mouseenter ->
     $(this).children().css('color','white')
     $(this).css('backgroundColor', '#ED6555')
-    $(this).css('backgroundPosition','153px -10px')
+    #$(this).css('backgroundPosition','153px -10px')
 
   $('#events').mouseleave ->
     $(this).children().css('color','#B2ACA6')
     $(this).css('backgroundColor', '#E6E2DF')
-    $(this).animate({backgroundPosition,'300px -10px'})
+    #$(this).animate({backgroundPosition,'300px -10px'})
 
 
   $('#plans').mouseenter ->
     $(this).children().css('color','white')
     $(this).css('backgroundColor', '#FF8400')
-    $(this).css('backgroundPosition','153px -10px')
 
   $('#plans').mouseleave ->
     $(this).children().css('color','#B2ACA6')
     $(this).css('backgroundColor', '#FEFCB5')
-    $(this).animate({backgroundPosition,'300px -10px'})
+
+  $('.thumb').live "mouseenter", ->
+    $(this).parent().css('z-index','100px')
+    $(this).parent().css('box-shadow','5px 5px 5px #ccc')
+    $(this).css('opacity','0.7')
+
+  $('.thumb').live "mouseleave", ->
+    $(this).parent().css('z-index','0px')
+    $(this).parent().css('box-shadow','0px')
+    $(this).css('opacity','1')
+
+  $('.thumb').live "click", ->
+    $('#gallery .large').removeClass('large').addClass('thumb')
+    $('.thumb').rotate(0)
+    $(this).toggleClass('thumb large')
+    $(this).rotate(-15)
+
+  $('.large').live "click", ->
+    $(this).toggleClass('large thumb')
+    $(this).rotate(0)

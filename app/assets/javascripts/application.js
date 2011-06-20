@@ -8,3 +8,9 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+$(".shining").live('mouseenter', function(){
+    $(this).animate({backgroundPosition: '153px -12px'},700);
+    });
+$(".shining").live('mouseleave',function(){
+    $(this).animate({backgroundPosition: '280px -12px'},700);
+    });
