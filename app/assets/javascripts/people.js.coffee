@@ -94,7 +94,9 @@ $(document).ready ->
   $('a#light').fancybox({'titlePosition':'over'})
   $('#listing').click ->
     $('#listing').effect("pulsate",{times:3},7000)
-
+  $('#supporter').click ->
+    $('#supporter').pixastic("desaturate")
+    $('#supporter').effect("pulsate",{times:3},5000)
 
 
 #  $('#listing').effect("pulsate",{times:20},1600)
@@ -160,3 +162,6 @@ $(document).ready ->
   $('.large').live "click", ->
     $(this).toggleClass('large thumb')
     $(this).rotate(0)
+
+  $('#info').live "click", ->
+    $('html,body').animate({ scrollTop: 0 }, "slow")

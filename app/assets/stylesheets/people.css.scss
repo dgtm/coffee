@@ -7,9 +7,10 @@ body.People {
   // Place scoped styles here
 }
 #boxes h2{
-    font-family:'Wallpoet';
+/*    font-family:'Wallpoet';
+*/  font-family:'Wallpoet';
     color:#B2ACA6;
-    font-size:30px;
+    font-size:50px;
     border-bottom:1px dotted;
 }
 .shining-text{
@@ -243,5 +244,64 @@ margin-bottom:30px;
     opacity:1.0;
     border-bottom:80px solid black;
 }
-.image-holder{
+#testimony{
+    width: 376px;
+    height: 206px;
+    padding: 80px 0px 80px 0px;
+    background: url('../assets/back_yellow.png') repeat;
+    -moz-border-radius: 30px 230px 230px 230px;
+    border-radius: 30px 230px 230px 230px;
+    text-align: center;
+}
+#supporter{
+    width: 156px;
+    height: 136px;
+    padding: 10px 0px 10px 0px;
+    background: url('../assets/back_yellow.png') repeat;
+    -moz-border-radius: 130px 130px 130px 130px;
+    border-radius: 130px 130px 130px 130px;
+    text-align: center;
+}
+#can-you{
+    font-family:'Cabin Sketch';
+    font-size:25px;
+    padding-top:30px;
+}
+#help{
+    font-family:'Monofett';
+    font-size:60px;
+    padding:10px 0px 10px 0px;
+}
+#us{
+    padding-top:10px;
+    font-family:'Six Caps';
+    font-size:35px;
+letter-spacing:1px;
+}
+#testimonial{
+    background-image:url('../assets/double-quotes.png');
+    background-repeat:no-repeat;
+    background-position:30px 0px;
+    height:30px;
+}
+
+blockquote {
+/*  font-family:'Goudy Bookletter 1911';
+*/font-size:30px;
+font-family:'Tangerine';
+line-height:30px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 10px;
+  background-image: url(../assets/openquote4.gif);
+  background-position: 10px;
+  background-repeat: no-repeat;
+    height:80px;
+    border-bottom:3px solid white;
+}
+#author{
+    font-style:italic;
+    font-size:20px;
+    padding-right:20px;
+
 }
