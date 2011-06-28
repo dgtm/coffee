@@ -95,8 +95,7 @@ $(document).ready ->
   $('#listing').click ->
     $('#listing').effect("pulsate",{times:3},7000)
   $('#supporter').click ->
-    $('#supporter').pixastic("desaturate")
-    $('#supporter').effect("pulsate",{times:3},5000)
+    $(self).pixastic("desaturate")
 
 
 #  $('#listing').effect("pulsate",{times:20},1600)
@@ -146,7 +145,7 @@ $(document).ready ->
   $('.thumb').live "mouseenter", ->
     $(this).parent().css('z-index','100px')
     $(this).parent().css('box-shadow','5px 5px 5px #ccc')
-    $(this).css('opacity','0.7')
+    $(this).css('opacity','1')
 
   $('.thumb').live "mouseleave", ->
     $(this).parent().css('z-index','0px')
@@ -163,5 +162,7 @@ $(document).ready ->
     $(this).toggleClass('large thumb')
     $(this).rotate(0)
 
-  $('#info').live "click", ->
+  $('#goup').live "click", ->
     $('html,body').animate({ scrollTop: 0 }, "slow")
+  $('#godown').live "click", ->
+    $('html,body').animate({ scrollTop: 1000 }, "slow")

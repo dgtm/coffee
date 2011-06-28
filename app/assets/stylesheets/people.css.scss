@@ -209,7 +209,7 @@ float:left;
     font-size:38px;
     line-height:48px;
     letter-spacing:1px;
-margin-bottom:30px;
+    margin-bottom:30px;
 }
 
 #stickynote p {
@@ -220,10 +220,23 @@ margin-bottom:30px;
 
 #stickynote a {color:#333;}
 
+#gallery{
+    width:700px;
+    height:1000px;
+    text-align:center;
+    margin-left:80px;
+    border: 20px outset black;
+padding:20px;
+border-radius:10px;
+}
 .image-holder{
     width:200px;
     height:200px;
     border-bottom:10px solid black;
+    float:left;
+    margin-right:20px;
+    margin-bottom:40px;
+
 }
 .thumb{
     width:200px;
@@ -237,12 +250,13 @@ margin-bottom:30px;
     position:absolute;
     left:200px;
     top:100px;
-    z-index:1000px;
+    z-index:1000;
     -moz-box-shadow: 5px 5px 5px #ccc;
     -webkit-box-shadow: 5px 5px 5px #ccc;
     box-shadow: 5px 5px 5px #ccc;
     opacity:1.0;
-    border-bottom:80px solid black;
+    border-bottom:100px solid black;
+
 }
 #testimony{
     width: 376px;
